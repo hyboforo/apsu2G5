@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- - Copyright (c) 2008 GENKEY CORPORATION All Rights Reserved. - - This 
+software is the confidential and proprietary information of GenKey. - You 
+shall not disclose such Confidential Information and shall use - it only 
+in accordance with the terms of the license agreement you - entered into 
+with GenKey Corporation. - - GENKEY MAKES NO REPRESENTATIONS OR WARRANTIES 
+ABOUT THE - SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING 
+BUT - NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
+- A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. GENKEY CORPORATION OR ANY - 
+OF ITS SUBSIDARIES WORLD-WIDE SHALL NOT BE LIABLE FOR ANY DAMAGES - SUFFERED 
+BY LICENSEE AS A RESULT OF USING, MODIFYING OR DISTRIBUTING - THIS SOFTWARE 
+OR ITS DERIVATIVES. -->
+<!-- - Author: Hanan Yaro -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xmlns:p="http://www.springframework.org/schema/p" 
+             xmlns:util="http://www.springframework.org/schema/util"
+             xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util-4.2.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+       http://www.springframework.org/schema/security 
+       http://www.springframework.org/schema/security/spring-security-4.2.xsd">
+    <tx:annotation-driven/>
+   
+    
+    <!-- REST Operation Handlers-->
+    <!--<bean id="licenseOperationHandler" class="com.tinsel.server.rest.LicenseOperationHandler"/>
+    <bean id="userOperationHandler" class="com.tinsel.server.rest.UserOperationHandler"/>
+    <bean id="offenseOperationHandler" class="com.tinsel.server.rest.OffenseOperationHandler"/>
+    <bean id="offenderOperationHandler" class="com.tinsel.server.rest.OffenderOperationHandler"/>-->
+    
+    <!--Entity Classes-->
+    <bean id="personImpl" class="com.dikantech.apsu2005.services.PersonEntity"/>
+   
+    
+    
+    <!--Parent DAO and datasource bean-->
+    <bean id="dao" abstract="true" init-method="init"
+          class="com.movement.model.dao.DefaultHibernateDAOImpl"
+          p:sessionFactory-ref="sessionFactory" 
+          p:dataSource-ref ="dataSource"/>
+    <!--persistent entities-->
+    <bean id="personDAO" class="com.dikantech.apsu2005.services.PersonDAO" 
+          p:persistentClassName="personImpl" parent="dao"/>
+    
+     <bean id="personService" class="com.dikantech.apsu2005.services.PersonServices"
+          p:personDAO-ref="personDAO"/>
+   <!-- <beans:bean id="offendersDAO" class="com.tinsel.entity.dao.impl.OffenderDAOImpl" 
+          p:persistentClassName="offenderImpl" parent="dao"/>
+    <beans:bean id="usersDAO" class="com.tinsel.entity.dao.impl.UsersDAOImpl" 
+           p:persistentClassName="usersImpl" parent="dao"/>
+    
+     <authentication-manager >
+        <authentication-provider user-service-ref="customUserDetailsServiceImpl">
+            <password-encoder ref="bcryptEncoder"/>
+        </authentication-provider>
+    </authentication-manager>
+      
+    <beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+ 
+    <beans:bean id="customUserDetailsServiceImpl" class="com.tinsel.entity.impl.util.CustomUserDetailsServiceImpl" />
+    
+     REST Operation Handlers
+    <beans:bean id="licenseOperationHandler" class="com.tinsel.server.rest.LicenseOperationHandler"/>
+    <beans:bean id="userOperationHandler" class="com.tinsel.server.rest.UserOperationHandler"/>
+    <beans:bean id="offenseOperationHandler" class="com.tinsel.server.rest.OffenseOperationHandler"/>
+    <beans:bean id="offenderOperationHandler" class="com.tinsel.server.rest.OffenderOperationHandler"/>-->
+    
+    <!--Service Implementatons -->
+    
+    <bean id="registrationController" class="com.dikantech.apsu2005.services.RegistrationController"/>
+    
+
+</beans>

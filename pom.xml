@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.dikanTech</groupId>
+    <artifactId>apsu2005</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>apsu2005-services</module>
+    <module>apsu2005-web</module>
+  </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>4.3.0.RELEASE</spring.version>
+        <spring.web.version></spring.web.version>
+        <hibernate.version>4.3.11.Final</hibernate.version>
+        <junit.version>4.10</junit.version>
+        <javassist.version>3.12.1.GA</javassist.version>
+        <slf4j.version>1.6.4</slf4j.version>
+        <perf4j.version>0.9.16</perf4j.version>
+        <logback.version>1.0.3</logback.version>
+        <atomikos.version>3.8.0</atomikos.version>
+        <postgresql.version>9.3-1101.jdbc4</postgresql.version>
+        <oracle.version>11gr2</oracle.version>
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <servlet.version>3.1.0</servlet.version>
+    </properties>
+</project>
