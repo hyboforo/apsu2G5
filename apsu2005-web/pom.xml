@@ -139,11 +139,11 @@
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.github.jsimone/webapp-runner -->
-        <dependency>
+<!--        <dependency>
             <groupId>com.github.jsimone</groupId>
             <artifactId>webapp-runner</artifactId>
             <version>8.5.29.0</version>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 
@@ -194,7 +194,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
+<!--            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.0.2</version>
@@ -216,7 +216,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
