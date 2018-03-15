@@ -140,12 +140,12 @@
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.github.jsimone/webapp-runner -->
-        <dependency>
+<!--        <dependency>
             <groupId>com.github.jsimone</groupId>
             <artifactId>webapp-runner</artifactId>
             <version>8.5.29.0</version>
             <scope>provided</scope>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 
@@ -231,7 +231,7 @@
                         </goals>
                         <phase>package</phase>
                         <configuration>
-                            <path>/helloworld</path>
+                            <path>/index</path>
                         </configuration>
                     </execution>
                 </executions>

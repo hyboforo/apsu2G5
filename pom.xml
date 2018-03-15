@@ -7,8 +7,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>apsu2005-services</module>
-    <module>apsu2005-web</module>
-  </modules>
+        <module>apsu2005-web</module>
+    </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version>4.3.0.RELEASE</spring.version>
@@ -50,6 +50,11 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>2.0.3</version>
+            </plugin>
         </plugins>
-    </build>
+</build>
 </project>
