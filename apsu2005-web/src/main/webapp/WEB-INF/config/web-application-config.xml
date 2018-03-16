@@ -58,7 +58,7 @@
     <import resource="data-access-postgres-config.xml"/>
     <import resource="service-config.xml"/>
     <!--<import resource="classpath:springmvc-resteasy-patch.xml" />-->
-    <context:component-scan base-package="com.tinsel" />
+    <context:component-scan base-package="com.dikantech" />
     
     
     
