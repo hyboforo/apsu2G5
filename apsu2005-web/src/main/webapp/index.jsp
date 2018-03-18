@@ -18,12 +18,12 @@
            </tr>
            <tr>
                <td>
-                   <a href="register.jsp"> Register </a>
+                   <a href="register"> Register </a>
                </td>
            </tr>
            <tr>
                <td>
-                   <a href="mail.jsp"> Send Mail </a>
+                   <a href="mail"> Send Mail </a>
                </td>
            </tr>
        </table>
