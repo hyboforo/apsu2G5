@@ -18,7 +18,7 @@
             <table align="center">
                 <tr>
                     <td>
-                        <form:label path="firstName">First Name</form:label>
+                        <form:label path="firstName">First Name:</form:label>
                         </td>
                         <td>
                         <form:input path="firstName" name="firstName" id="firstName"/>
@@ -26,7 +26,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <form:label path="middleName">Middle Name</form:label>
+                        <form:label path="middleName">Middle Name:</form:label>
                         </td>
                         <td>
                         <form:input path="middleName" name="middleName" id="middleName" />
@@ -34,7 +34,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <form:label path="lastName">Last Name</form:label>
+                        <form:label path="lastName">Last Name:</form:label>
                         </td>
                         <td>
                         <form:input path="lastName" name="lastName" id="lastName" />
@@ -42,7 +42,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <form:label path="email">Email</form:label>
+                        <form:label path="email">Email:</form:label>
                         </td>
                         <td>
                         <form:input path="email" name="email" id="email" />
@@ -50,7 +50,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <form:label path="phone">Phone Number</form:label>
+                        <form:label path="phone">Phone Number (eg. 02011122222):</form:label>
                         </td>
                         <td>
                         <form:input path="phone" name="phone" id="phone" />
@@ -58,7 +58,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <form:label path="house">House</form:label>
+                        <form:label path="house">House (eg. St. Lukes, St.Johns):</form:label>
                         </td>
                         <td>
                         <form:input path="house" name="house" id="house" />
@@ -66,7 +66,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <form:label path="courseClass">Class</form:label>
+                        <form:label path="courseClass">Class (eg. Arts 3, Business 3):</form:label>
                         </td>
                         <td>
                         <form:input path="courseClass" name="courseClass" id="courseClass" />
@@ -74,7 +74,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <form:label path="program">Course</form:label>
+                        <form:label path="program">Course (eg. Arts, Business):</form:label>
                         </td>
                         <td>
                         <form:input path="program" name="program" id="program" />
@@ -90,7 +90,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <form:label path="country">Country of Residence</form:label>
+                        <form:label path="country">Country of Residence (eg. America, England, Ghana):</form:label>
                         </td>
                         <td>
                         <form:input path="country" name="country" id="country" />

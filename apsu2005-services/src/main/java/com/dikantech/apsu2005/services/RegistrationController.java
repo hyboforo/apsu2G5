@@ -68,6 +68,19 @@ public class RegistrationController {
         return mav;
     }
 
+//    @RequestMapping(value = "/members", method = RequestMethod.GET)
+//    public ModelAndView showMembers(HttpServletRequest request, HttpServletResponse response) {
+//        try {
+//            List<PersonEntity> members = personServices.getMembers();
+//            ModelAndView mav = new ModelAndView("member");
+//            mav.addObject("person", new PersonEntity());
+//            return mav;
+//        } catch (Exception ex) {
+//            logger.error("Failed to process subjects within transaction: " + ex.getLocalizedMessage());
+//        }
+//
+//    }
+
     @RequestMapping(value = "/mailProcess", method = RequestMethod.POST)
     public ModelAndView sendMail(HttpServletRequest request, HttpServletResponse response, @ModelAttribute("mailer") Mailer mailer) {
         try {
