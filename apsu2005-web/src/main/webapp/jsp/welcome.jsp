@@ -9,19 +9,19 @@
     <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>Thank You</title>
+        <title>Apsu-2005::Thank You</title>
     </head>
     <body>
-        <table>
+        <table align="center">
             <tr>
-                <td>Thank you for registering! ${firstname}</td>
+                <td>Thank you for registering! ${firstname} </td>
             </tr>
             <tr>
             </tr>
             <tr>
             </tr>
             <tr>
-                <td><a href="register.jsp">Home</a>
+                <td><a href="index.jsp">Home</a>
                 </td>
             </tr>
         </table>

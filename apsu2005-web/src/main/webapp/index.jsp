@@ -26,6 +26,11 @@
                    <a href="mail"> Send Mail </a>
                </td>
            </tr>
+           <tr>
+               <td>
+                   <a href="showAll"> List Members </a>
+               </td>
+           </tr>
        </table>
     </body>
 </html>

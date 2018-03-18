@@ -5,6 +5,7 @@
  */
 package com.dikantech.apsu2005.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -68,18 +70,26 @@ public class RegistrationController {
         return mav;
     }
 
-//    @RequestMapping(value = "/members", method = RequestMethod.GET)
-//    public ModelAndView showMembers(HttpServletRequest request, HttpServletResponse response) {
-//        try {
-//            List<PersonEntity> members = personServices.getMembers();
-//            ModelAndView mav = new ModelAndView("member");
-//            mav.addObject("person", new PersonEntity());
-//            return mav;
-//        } catch (Exception ex) {
-//            logger.error("Failed to process subjects within transaction: " + ex.getLocalizedMessage());
-//        }
-//
-//    }
+    @RequestMapping(value = "/showAll", method = RequestMethod.GET)
+    public ModelAndView showMembers(HttpServletRequest request, HttpServletResponse response) {
+         return transactionTemplate.execute(new TransactionCallback<ModelAndView>() {
+            @Override
+            public ModelAndView doInTransaction(TransactionStatus ts) {
+                try {
+                    List<PersonEntity> list = new ArrayList<>();
+                    list = personServices.getMembers();
+                    ModelAndView view = new ModelAndView("showAll", "members", list);
+                    logger.info("Got all members, returning");
+                    return view;
+                } catch (Exception ex) {
+                    logger.error("Failed to process subjects within transaction: " + ex.getLocalizedMessage());
+                }
+                logger.info("failed to return in try");
+                return null;
+            }
+
+        });
+    }
 
     @RequestMapping(value = "/mailProcess", method = RequestMethod.POST)
     public ModelAndView sendMail(HttpServletRequest request, HttpServletResponse response, @ModelAttribute("mailer") Mailer mailer) {
