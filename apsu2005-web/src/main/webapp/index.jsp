@@ -12,6 +12,20 @@
         <title>APSU 2005</title>
     </head>
     <body>
-       Kindly Pay your DUES!!!
+       <table align="center">
+           <tr>
+               <td>KINDLY PAY YOUR DUES!!!</td>
+           </tr>
+           <tr>
+               <td>
+                   <a href="register.jsp"> Register </a>
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <a href="mail.jsp"> Send Mail </a>
+               </td>
+           </tr>
+       </table>
     </body>
 </html>
