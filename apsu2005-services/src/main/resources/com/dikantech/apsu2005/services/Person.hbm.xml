@@ -50,7 +50,7 @@ Contributor(s):
         <property name="firstName" column="first_name" not-null="true"/>
         <property name="middleName" column="middle_name" not-null="true"/>
         <property name="lastName" column="last_name" not-null="true"/>
-        <property name="phone" column="phone"/>
+        <property name="phone" column="phone" unique="true"/>
         <property name="email" column="email"/>
         <property name="house" column="house"/>
         <property name="courseClass" column="class"/>
